@@ -16,7 +16,7 @@ interface Props extends TouchableHighlightProps {
   title: string;
 }
 
-export default class ListButton extends React.Component<Props> {
+class ListButton extends React.Component<Props> {
   render() {
     const style: ViewStyle[] = [styles.button];
     const labelStyles: TextStyle[] = [styles.label];
@@ -55,3 +55,5 @@ const styles = StyleSheet.create({
     color: '#999999',
   },
 });
+
+export { ListButton };

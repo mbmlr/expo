@@ -1,4 +1,4 @@
-export default function SearchBar({ textColor, cancelButtonText, tintColor, placeholderTextColor, onChangeQuery, onSubmit, onCancelPress, initialValue, }: {
+declare function SearchBar({ textColor, cancelButtonText, tintColor, placeholderTextColor, onChangeQuery, onSubmit, onCancelPress, initialValue, }: {
     initialValue?: string;
     cancelButtonText?: string;
     selectionColor?: string;
@@ -10,3 +10,4 @@ export default function SearchBar({ textColor, cancelButtonText, tintColor, plac
     onChangeQuery?: (query: string) => void;
     onCancelPress?: (goBack: () => void) => void;
 }): JSX.Element;
+export { SearchBar };

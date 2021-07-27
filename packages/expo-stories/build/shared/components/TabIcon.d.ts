@@ -4,7 +4,7 @@ interface Props {
     focused?: boolean;
     size?: number;
 }
-export default class TabIcon extends React.PureComponent<Props> {
+declare class TabIcon extends React.PureComponent<Props> {
     render(): JSX.Element;
 }
-export {};
+export { TabIcon };

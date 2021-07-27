@@ -1,4 +1,4 @@
-export default function SearchBar({ selectionColor, tintColor, placeholderTextColor, underlineColorAndroid, textColor, onSubmit, onChangeQuery, initialValue, }: {
+declare function SearchBar({ selectionColor, tintColor, placeholderTextColor, underlineColorAndroid, textColor, onSubmit, onChangeQuery, initialValue, }: {
     initialValue?: string;
     selectionColor?: string;
     tintColor: string;
@@ -8,3 +8,4 @@ export default function SearchBar({ selectionColor, tintColor, placeholderTextCo
     onSubmit?: (query: string) => void;
     onChangeQuery?: (query: string) => void;
 }): JSX.Element;
+export { SearchBar };

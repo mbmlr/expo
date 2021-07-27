@@ -11,7 +11,7 @@ const MonoText: React.FunctionComponent<{
   </View>
 );
 
-export default MonoText;
+export { MonoText };
 
 const styles = StyleSheet.create({
   container: {

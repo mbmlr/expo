@@ -4,12 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const landmarkSize = 2;
 
-export const scaledFace = (scale: number) => ({
-  faceID,
-  bounds,
-  rollAngle,
-  yawAngle,
-}: FaceFeature) => (
+const scaledFace = (scale: number) => ({ faceID, bounds, rollAngle, yawAngle }: FaceFeature) => (
   <View
     key={faceID}
     style={[
@@ -32,7 +27,7 @@ export const scaledFace = (scale: number) => ({
   </View>
 );
 
-export const scaledLandmarks = (scale: number) => (face: FaceFeature) => {
+const scaledLandmarks = (scale: number) => (face: FaceFeature) => {
   const renderLandmark = (position?: { x: number; y: number }) =>
     position && (
       <View
@@ -46,7 +41,6 @@ export const scaledLandmarks = (scale: number) => (face: FaceFeature) => {
         ]}
       />
     );
-  console.log('landmark', face);
   return (
     <View key={`landmarks-${face.faceID}`}>
       {renderLandmark(face.leftEyePosition)}
@@ -64,8 +58,8 @@ export const scaledLandmarks = (scale: number) => (face: FaceFeature) => {
   );
 };
 
-export const face = scaledFace(1);
-export const landmarks = scaledLandmarks(1);
+const face = scaledFace(1);
+const landmarks = scaledLandmarks(1);
 
 const styles = StyleSheet.create({
   face: {
@@ -91,3 +85,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
 });
+
+export { face, landmarks, scaledFace, scaledLandmarks };

@@ -7,4 +7,4 @@ interface Props extends TouchableHighlightProps {
     buttonStyle?: ViewStyle;
 }
 declare const Button: React.FunctionComponent<Props>;
-export default Button;
+export { Button };

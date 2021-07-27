@@ -10,7 +10,7 @@ interface Props {
   size?: number;
 }
 
-export default class TabIcon extends React.PureComponent<Props> {
+class TabIcon extends React.PureComponent<Props> {
   render() {
     const { size = 27, name, focused } = this.props;
     const color = focused ? Colors.tabIconSelected : Colors.tabIconDefault;
@@ -22,3 +22,5 @@ export default class TabIcon extends React.PureComponent<Props> {
     return <MaterialCommunityIcons name={name as any} size={platformSize} color={color} />;
   }
 }
+
+export { TabIcon };

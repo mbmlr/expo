@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
-export default class GoogleSignInButton extends React.PureComponent<{
+declare class GoogleSignInButton extends React.PureComponent<{
     style?: StyleProp<ViewStyle>;
     disabled?: boolean;
 }> {
@@ -9,3 +9,4 @@ export default class GoogleSignInButton extends React.PureComponent<{
     };
     render(): JSX.Element;
 }
+export { GoogleSignInButton };

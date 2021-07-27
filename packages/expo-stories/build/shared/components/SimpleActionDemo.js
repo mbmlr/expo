@@ -39,10 +39,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleActionDemo = void 0;
 var react_1 = __importDefault(require("react"));
 var react_native_1 = require("react-native");
 var Colors_1 = __importDefault(require("../constants/Colors"));
-var MonoText_1 = __importDefault(require("./MonoText"));
+var MonoText_1 = require("./MonoText");
 function SimpleActionDemo(props) {
     var _this = this;
     var _a = react_1.default.useState(false), loading = _a[0], setLoading = _a[1];
@@ -77,9 +78,9 @@ function SimpleActionDemo(props) {
             react_1.default.createElement(react_native_1.View, { style: styles.demoHeaderContainer },
                 react_1.default.createElement(react_native_1.Text, { style: styles.demoHeader }, props.title),
                 loading && react_1.default.createElement(react_native_1.ActivityIndicator, { style: styles.demoActivityIndicator, size: 10 }))),
-        react_1.default.createElement(react_native_1.View, { style: { opacity: loading ? 0.4 : 1.0 } }, value !== undefined && (react_1.default.createElement(MonoText_1.default, { containerStyle: monoContainerStyle }, JSON.stringify(value, null, 2))))));
+        react_1.default.createElement(react_native_1.View, { style: { opacity: loading ? 0.4 : 1.0 } }, value !== undefined && (react_1.default.createElement(MonoText_1.MonoText, { containerStyle: monoContainerStyle }, JSON.stringify(value, null, 2))))));
 }
-exports.default = SimpleActionDemo;
+exports.SimpleActionDemo = SimpleActionDemo;
 var styles = react_native_1.StyleSheet.create({
     demoContainer: {
         paddingHorizontal: 10,

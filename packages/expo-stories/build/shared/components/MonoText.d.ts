@@ -4,4 +4,4 @@ declare const MonoText: React.FunctionComponent<{
     containerStyle?: StyleProp<ViewStyle>;
     textStyle?: StyleProp<TextStyle>;
 }>;
-export default MonoText;
+export { MonoText };

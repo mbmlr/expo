@@ -1,5 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
-export default function TitledPicker({ style, titleStyle, title, value, setValue, items, disabled, }: {
+declare function TitledPicker({ style, titleStyle, title, value, setValue, items, disabled, }: {
     style?: ViewStyle;
     titleStyle?: TextStyle;
     title?: string;
@@ -11,3 +11,4 @@ export default function TitledPicker({ style, titleStyle, title, value, setValue
     disabled?: boolean;
     setValue: (value: string) => void;
 }): JSX.Element;
+export { TitledPicker };

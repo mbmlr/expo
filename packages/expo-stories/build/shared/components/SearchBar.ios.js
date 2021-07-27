@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchBar = void 0;
 var Ionicons_1 = __importDefault(require("@expo/vector-icons/build/Ionicons"));
 var native_1 = require("@react-navigation/native");
 var react_1 = __importDefault(require("react"));
@@ -83,7 +84,7 @@ function SearchBar(_a) {
                         color: tintColor || '#007AFF',
                     } }, cancelButtonText || 'Cancel')))));
 }
-exports.default = SearchBar;
+exports.SearchBar = SearchBar;
 var styles = react_native_1.StyleSheet.create({
     container: {
         flex: 1,

@@ -20,7 +20,7 @@ interface Props {
 }
 
 // A custom button that shows examples of different share sheet configurations
-export default class ShowActionSheetButton extends React.PureComponent<Props> {
+class ShowActionSheetButton extends React.PureComponent<Props> {
   static defaultProps = {
     withTitle: false,
     withMessage: false,
@@ -107,3 +107,5 @@ export default class ShowActionSheetButton extends React.PureComponent<Props> {
     );
   }
 }
+
+export { ShowActionSheetButton };

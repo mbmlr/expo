@@ -27,7 +27,7 @@ const SearchIcon = () => (
   </View>
 );
 
-export default function SearchBar({
+function SearchBar({
   textColor,
   cancelButtonText,
   tintColor,
@@ -188,3 +188,5 @@ const styles = StyleSheet.create({
     paddingTop: 1,
   },
 });
+
+export { SearchBar };

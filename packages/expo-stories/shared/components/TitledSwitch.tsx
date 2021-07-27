@@ -2,7 +2,7 @@ import { B } from '@expo/html-elements';
 import React from 'react';
 import { StyleSheet, Switch, View, TextStyle, ViewStyle } from 'react-native';
 
-export default function TitleSwitch({
+function TitleSwitch({
   style,
   titleStyle,
   title,
@@ -42,3 +42,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
 });
+
+export { TitleSwitch };

@@ -10,7 +10,7 @@ interface Props {
     withSeparators?: boolean;
     withCustomStyles?: boolean;
 }
-export default class ShowActionSheetButton extends React.PureComponent<Props> {
+declare class ShowActionSheetButton extends React.PureComponent<Props> {
     static defaultProps: {
         withTitle: boolean;
         withMessage: boolean;
@@ -22,4 +22,4 @@ export default class ShowActionSheetButton extends React.PureComponent<Props> {
     _showActionSheet: () => void;
     render(): JSX.Element;
 }
-export {};
+export { ShowActionSheetButton };

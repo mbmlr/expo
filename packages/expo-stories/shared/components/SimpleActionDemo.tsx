@@ -9,14 +9,14 @@ import {
 } from 'react-native';
 
 import Colors from '../constants/Colors';
-import MonoText from './MonoText';
+import { MonoText } from './MonoText';
 
 type SimpleActionDemoProps = {
   title: string;
   action: (setValue: (value: any) => any) => any;
 };
 
-export default function SimpleActionDemo(props: SimpleActionDemoProps) {
+function SimpleActionDemo(props: SimpleActionDemoProps) {
   const [loading, setLoading] = React.useState(false);
   const [value, setValue] = React.useState<any>(undefined);
 
@@ -74,3 +74,5 @@ const styles = StyleSheet.create({
     borderColor: Colors.errorBackground,
   },
 });
+
+export { SimpleActionDemo };

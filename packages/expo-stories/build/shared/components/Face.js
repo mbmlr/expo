@@ -3,11 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.landmarks = exports.face = exports.scaledLandmarks = exports.scaledFace = void 0;
+exports.scaledLandmarks = exports.scaledFace = exports.landmarks = exports.face = void 0;
 var react_1 = __importDefault(require("react"));
 var react_native_1 = require("react-native");
 var landmarkSize = 2;
-exports.scaledFace = function (scale) { return function (_a) {
+var scaledFace = function (scale) { return function (_a) {
     var faceID = _a.faceID, bounds = _a.bounds, rollAngle = _a.rollAngle, yawAngle = _a.yawAngle;
     return (react_1.default.createElement(react_native_1.View, { key: faceID, style: [
             styles.face,
@@ -33,7 +33,8 @@ exports.scaledFace = function (scale) { return function (_a) {
             "yawAngle: ",
             yawAngle.toFixed(0))));
 }; };
-exports.scaledLandmarks = function (scale) { return function (face) {
+exports.scaledFace = scaledFace;
+var scaledLandmarks = function (scale) { return function (face) {
     var renderLandmark = function (position) {
         var _a, _b;
         return position && (react_1.default.createElement(react_native_1.View, { key: "" + ((_a = position === null || position === void 0 ? void 0 : position.x) !== null && _a !== void 0 ? _a : 'no-x') + ((_b = position === null || position === void 0 ? void 0 : position.y) !== null && _b !== void 0 ? _b : 'no-y'), style: [
@@ -44,7 +45,6 @@ exports.scaledLandmarks = function (scale) { return function (face) {
                 },
             ] }));
     };
-    console.log('landmark', face);
     return (react_1.default.createElement(react_native_1.View, { key: "landmarks-" + face.faceID },
         renderLandmark(face.leftEyePosition),
         renderLandmark(face.rightEyePosition),
@@ -58,8 +58,11 @@ exports.scaledLandmarks = function (scale) { return function (face) {
         renderLandmark(face.noseBasePosition),
         renderLandmark(face.bottomMouthPosition)));
 }; };
-exports.face = exports.scaledFace(1);
-exports.landmarks = exports.scaledLandmarks(1);
+exports.scaledLandmarks = scaledLandmarks;
+var face = scaledFace(1);
+exports.face = face;
+var landmarks = scaledLandmarks(1);
+exports.landmarks = landmarks;
 var styles = react_native_1.StyleSheet.create({
     face: {
         padding: 10,

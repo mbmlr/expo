@@ -14,7 +14,7 @@ const googleIcon = {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png',
 };
 
-export default class GoogleSignInButton extends React.PureComponent<{
+class GoogleSignInButton extends React.PureComponent<{
   style?: StyleProp<ViewStyle>;
   disabled?: boolean;
 }> {
@@ -58,3 +58,6 @@ const styles = StyleSheet.create({
   icon: { width: 24, aspectRatio: 1 },
   text: { color: 'gray', marginLeft: 12, fontSize: 16, fontWeight: '600' },
 });
+
+
+export { GoogleSignInButton }

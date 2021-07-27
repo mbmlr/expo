@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, TextStyle, TouchableOpacity, View, Platform } fr
 
 import Colors from '../constants/Colors';
 
-export default function SearchBar({
+function SearchBar({
   selectionColor,
   tintColor = Colors.tintColor,
   placeholderTextColor = '#ccc',
@@ -98,3 +98,5 @@ const styles = StyleSheet.create({
     }),
   },
 });
+
+export { SearchBar };

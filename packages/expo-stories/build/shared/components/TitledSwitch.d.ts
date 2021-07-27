@@ -1,5 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
-export default function TitleSwitch({ style, titleStyle, title, value, setValue, disabled, }: {
+declare function TitleSwitch({ style, titleStyle, title, value, setValue, disabled, }: {
     style?: ViewStyle;
     titleStyle?: TextStyle;
     title?: string;
@@ -7,3 +7,4 @@ export default function TitleSwitch({ style, titleStyle, title, value, setValue,
     disabled?: boolean;
     setValue: (value: boolean) => void;
 }): JSX.Element;
+export { TitleSwitch };

@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Section = exports.ScrollPage = exports.Page = void 0;
+exports.ScrollPage = exports.Section = exports.Page = void 0;
 var html_elements_1 = require("@expo/html-elements");
 var React = __importStar(require("react"));
 var react_native_1 = require("react-native");

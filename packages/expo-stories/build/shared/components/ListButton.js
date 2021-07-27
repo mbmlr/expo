@@ -16,6 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListButton = void 0;
 var react_1 = __importDefault(require("react"));
 var react_native_1 = require("react-native");
 var Colors_1 = __importDefault(require("../constants/Colors"));
@@ -37,7 +38,7 @@ var ListButton = /** @class */ (function (_super) {
     };
     return ListButton;
 }(react_1.default.Component));
-exports.default = ListButton;
+exports.ListButton = ListButton;
 var styles = react_native_1.StyleSheet.create({
     container: {},
     button: {

@@ -33,7 +33,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HeaderContainerRight = void 0;
+exports.HeaderIconButton = exports.HeaderContainerRight = void 0;
 var Ionicons_1 = __importDefault(require("@expo/vector-icons/build/Ionicons"));
 var React = __importStar(require("react"));
 var react_native_1 = require("react-native");
@@ -46,5 +46,5 @@ function HeaderIconButton(_a) {
     return (React.createElement(react_native_1.TouchableOpacity, { disabled: disabled, style: { paddingHorizontal: 12 }, onPress: onPress },
         React.createElement(Ionicons_1.default, { size: size, color: color, name: name })));
 }
-exports.default = HeaderIconButton;
+exports.HeaderIconButton = HeaderIconButton;
 //# sourceMappingURL=HeaderIconButton.js.map

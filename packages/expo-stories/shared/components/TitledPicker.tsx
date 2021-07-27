@@ -3,7 +3,7 @@ import { Picker } from '@react-native-picker/picker';
 import * as React from 'react';
 import { StyleSheet, View, TextStyle, ViewStyle } from 'react-native';
 
-export default function TitledPicker({
+function TitledPicker({
   style,
   titleStyle,
   title,
@@ -53,3 +53,5 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
 });
+
+export { TitledPicker };

@@ -19,6 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TitledPicker = void 0;
 var html_elements_1 = require("@expo/html-elements");
 var picker_1 = require("@react-native-picker/picker");
 var React = __importStar(require("react"));
@@ -33,7 +34,7 @@ function TitledPicker(_a) {
             return (React.createElement(picker_1.Picker.Item, { label: value, value: key, key: key }));
         }))));
 }
-exports.default = TitledPicker;
+exports.TitledPicker = TitledPicker;
 var styles = react_native_1.StyleSheet.create({
     container: {
         flexDirection: 'row',

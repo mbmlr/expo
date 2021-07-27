@@ -2,11 +2,11 @@ import { H4 } from '@expo/html-elements';
 import * as React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
 
-export function Page({ children }: { children: any }) {
+function Page({ children }: { children: any }) {
   return <View style={{ paddingHorizontal: 12, paddingBottom: 12 }}>{children}</View>;
 }
 
-export function ScrollPage({ children }: { children: any }) {
+function ScrollPage({ children }: { children: any }) {
   return (
     <ScrollView style={{ flex: 1, paddingHorizontal: 12, paddingBottom: 12 }}>
       {children}
@@ -14,7 +14,7 @@ export function ScrollPage({ children }: { children: any }) {
   );
 }
 
-export function Section({ title, children, row }: { title: string; children: any; row?: boolean }) {
+function Section({ title, children, row }: { title: string; children: any; row?: boolean }) {
   return (
     <View
       style={{
@@ -27,3 +27,5 @@ export function Section({ title, children, row }: { title: string; children: any
     </View>
   );
 }
+
+export { Page, Section, ScrollPage };
